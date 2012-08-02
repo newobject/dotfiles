@@ -1,0 +1,4 @@
+set guifont=Monaco:h16
+
+set go-=T
+set go-=r
