@@ -1,5 +1,7 @@
 set nocompatible
 filetype off
+syntax enable
+set background=dark
 
 set encoding=utf-8
 set laststatus=2
@@ -24,6 +26,8 @@ Bundle 'gmarik/vundle'
 if count(g:vim_packages, 'general')
   Bundle 'scrooloose/nerdtree'
   Bundle 'kien/ctrlp.vim'
+  Bundle 'altercation/vim-colors-solarized'
+  colorscheme solarized
 endif
 
 if count(g:vim_packages, 'fancy')
