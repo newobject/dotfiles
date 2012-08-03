@@ -1,8 +1,8 @@
 DOTFILES = "$HOME/dotfiles"
 
 git clone https://github.com/newobject/dotfiles.git $DOTFILES
-
-git clone http://github.com/gmarik/vundle.git $DOTFILES/vim/bundle/vundle
+cd $DOTFILES
+git submodule update
 
 ln -s $DOTFILES/vimrc $HOME/.vimrc
 ln -s $DOTFILES/gvimrc $HOME/.gvimrc
