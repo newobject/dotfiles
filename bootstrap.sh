@@ -2,6 +2,7 @@ DOTFILES = "$HOME/dotfiles"
 
 git clone https://github.com/newobject/dotfiles.git $DOTFILES
 cd $DOTFILES
+git submodule init
 git submodule update
 
 ln -s $DOTFILES/vimrc $HOME/.vimrc
