@@ -76,7 +76,7 @@ endif
 let mapleader = ","
 
 if ! exists('g:vim"_packages')
-  let g:vim_packages = ['general', 'fancy', 'coding', 'ruby']
+  let g:vim_packages = ['general', 'fancy', 'coding', 'ruby', 'javascript']
 endif
 
 set rtp+=~/.vim/bundle/vundle/
@@ -107,6 +107,14 @@ endif
 
 if count(g:vim_packages, 'ruby')
   Bundle 'vim-ruby/vim-ruby'
+endif
+
+
+if count(g:vim_packages, 'javascript')
+  Bundle "pangloss/vim-javascript"
+  let g:html_indent_inctags = "html,body,head,tbody"
+  let g:html_indent_script1 = "inc"
+  let g:html_indent_style1 = "inc"
 endif
 
 ""
