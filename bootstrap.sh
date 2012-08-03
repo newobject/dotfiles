@@ -1,13 +1,18 @@
-DOTFILES = "$HOME/dotfiles"
+DOTFILES="$HOME/dotfiles"
 
+echo "\nClone dotfiles..."
 git clone https://github.com/newobject/dotfiles.git $DOTFILES
-cd $DOTFILES
-git submodule init
-git submodule update
 
+echo "\nClone vundle..."
+git clone https://github.com/gmarik/vundle.git $DOTFILES/vim/bundle/vundle
+
+echo "\nLink files..."
 ln -s $DOTFILES/vimrc $HOME/.vimrc
 ln -s $DOTFILES/gvimrc $HOME/.gvimrc
 ln -s $DOTFILES/gvimrc.before $HOME/.gvimrc.before
 ln -s $DOTFILES/vim $HOME/.vim
 
-vim +BundleInstall! +BundleClean +q
+echo "\nInstalling plugins using vundle..."
+vi +BundleInstall! +BundleClean +q
+
+echo "\nDone!"
