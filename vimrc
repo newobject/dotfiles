@@ -92,8 +92,13 @@ if count(g:vim_packages, 'general')
   map <leader>e :NERDTreeFind<CR>
 
   Bundle 'kien/ctrlp.vim'
+
   Bundle 'altercation/vim-colors-solarized'
   colorscheme solarized
+
+  if executable('ack')
+    Bundle 'mileszs/ack.vim'
+  endif
 endif
 
 if count(g:vim_packages, 'fancy')
