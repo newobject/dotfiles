@@ -93,6 +93,8 @@ if count(g:vim_packages, 'general')
 
   Bundle 'kien/ctrlp.vim'
 
+  Bundle 'tpope/vim-fugitive'
+
   Bundle 'altercation/vim-colors-solarized'
   colorscheme solarized
 
