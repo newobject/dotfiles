@@ -32,8 +32,10 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+#plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export EDITOR=mvim
+export NODE_PATH=/usr/local/lib/node_modules

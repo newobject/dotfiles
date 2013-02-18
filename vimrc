@@ -96,8 +96,10 @@ if count(g:vim_packages, 'general')
 
   Bundle 'tpope/vim-fugitive'
 
-  Bundle 'altercation/vim-colors-solarized'
-  colorscheme solarized
+  "Bundle 'altercation/vim-colors-solarized'
+  "colorscheme solarized
+  Bundle 'yearofmoo/Vim-Darkmate'
+  colorscheme darkmate
 
   if executable('ack')
     Bundle 'mileszs/ack.vim'
