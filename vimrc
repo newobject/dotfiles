@@ -93,6 +93,8 @@ if count(g:vim_packages, 'general')
   map <leader>e :NERDTreeFind<CR>
 
   Bundle 'kien/ctrlp.vim'
+  let g:ctrlp_root_markers = ['.ctrlp_root_flag']
+  let g:ctrlp_working_path_mode = 'r'
 
   Bundle 'tpope/vim-fugitive'
 

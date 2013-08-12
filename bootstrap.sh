@@ -12,11 +12,9 @@ ln -s $DOTFILES/zshrc $HOME/.zshrc
 ln -s $DOTFILES/vimrc $HOME/.vimrc
 ln -s $DOTFILES/gvimrc $HOME/.gvimrc
 ln -s $DOTFILES/gvimrc.before $HOME/.gvimrc.before
+ln -s $DOTFILES/gvimrc.after $HOME/.gvimrc.after
 ln -s $DOTFILES/vim $HOME/.vim
 ln -s $DOTFILES/tmux.conf $HOME/.tmux.conf
-
-echo "\nChange to zsh"
-chsh -s /bin/zsh
 
 echo "\nInstalling plugins using vundle..."
 vi +BundleInstall! +BundleClean +q
