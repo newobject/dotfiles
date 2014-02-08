@@ -4,7 +4,6 @@
 
 set nocompatible      " Use vim, no vi defaults
 set number            " Show line numbers
-syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
 set guifont=Monaco:h18
 
@@ -106,6 +105,10 @@ if count(g:vim_packages, 'general')
   if executable('ack')
     Bundle 'mileszs/ack.vim'
   endif
+
+  if executable('ag')
+    Bundle 'rking/ag.vim'
+  endif
 endif
 
 if count(g:vim_packages, 'fancy')
@@ -132,5 +135,9 @@ endif
 ""
 "" File types
 ""
-
-filetype plugin indent on       " Turn on filetype plugins (:help filetype-plugin)
+filetype plugin on
+filetype indent on
+filetype plugin indent off       " Turn on filetype plugins (:help filetype-plugin)
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on         " Turn on syntax highlighting allowing local overrides
